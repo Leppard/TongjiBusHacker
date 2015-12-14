@@ -67,7 +67,7 @@ typedef NS_ENUM(NSInteger, TJBusDataSourceType) {
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    
 }
 
 #pragma mark - getters & setters

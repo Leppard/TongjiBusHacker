@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		748B0D2BFF13CCA5F2D01ADC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B92AB04480FD2CCEFC08EF05 /* libPods.a */; };
 		8CF0CF711C1E9CEF003B7547 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CF701C1E9CEF003B7547 /* main.m */; };
 		8CF0CF741C1E9CEF003B7547 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CF731C1E9CEF003B7547 /* AppDelegate.m */; };
 		8CF0CF771C1E9CEF003B7547 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CF761C1E9CEF003B7547 /* ViewController.m */; };
 		8CF0CF7C1C1E9CEF003B7547 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CF0CF7B1C1E9CEF003B7547 /* Assets.xcassets */; };
 		8CF0CF8A1C1E9CEF003B7547 /* TongjiBusHackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CF891C1E9CEF003B7547 /* TongjiBusHackerTests.m */; };
 		8CF0CF951C1E9CEF003B7547 /* TongjiBusHackerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CF941C1E9CEF003B7547 /* TongjiBusHackerUITests.m */; };
+		8CF0CFA71C1EBC1F003B7547 /* TJPersonalInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CFA61C1EBC1F003B7547 /* TJPersonalInfo.m */; };
+		8CF0CFAB1C1EBD13003B7547 /* TJBusProxyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CFAA1C1EBD13003B7547 /* TJBusProxyManager.m */; };
+		8CF0CFB11C1EBDA4003B7547 /* TJBusRouteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CFB01C1EBDA4003B7547 /* TJBusRouteTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7193EF3469DA504B3596DFBD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8CF0CF6C1C1E9CEF003B7547 /* TongjiBusHacker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TongjiBusHacker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF0CF701C1E9CEF003B7547 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8CF0CF721C1E9CEF003B7547 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,6 +52,14 @@
 		8CF0CF901C1E9CEF003B7547 /* TongjiBusHackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TongjiBusHackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF0CF941C1E9CEF003B7547 /* TongjiBusHackerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TongjiBusHackerUITests.m; sourceTree = "<group>"; };
 		8CF0CF961C1E9CEF003B7547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CF0CFA51C1EBC1F003B7547 /* TJPersonalInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPersonalInfo.h; sourceTree = "<group>"; };
+		8CF0CFA61C1EBC1F003B7547 /* TJPersonalInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPersonalInfo.m; sourceTree = "<group>"; };
+		8CF0CFA91C1EBD13003B7547 /* TJBusProxyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJBusProxyManager.h; sourceTree = "<group>"; };
+		8CF0CFAA1C1EBD13003B7547 /* TJBusProxyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJBusProxyManager.m; sourceTree = "<group>"; };
+		8CF0CFAF1C1EBDA4003B7547 /* TJBusRouteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJBusRouteTableViewCell.h; sourceTree = "<group>"; };
+		8CF0CFB01C1EBDA4003B7547 /* TJBusRouteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJBusRouteTableViewCell.m; sourceTree = "<group>"; };
+		B92AB04480FD2CCEFC08EF05 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3993BCB7E19002463170602 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				748B0D2BFF13CCA5F2D01ADC /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +88,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43DE2145F36EB40C2BDA390B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B92AB04480FD2CCEFC08EF05 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5990BE62575EF818C65F83DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3993BCB7E19002463170602 /* Pods.debug.xcconfig */,
+				7193EF3469DA504B3596DFBD /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8CF0CF631C1E9CEF003B7547 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +112,8 @@
 				8CF0CF881C1E9CEF003B7547 /* TongjiBusHackerTests */,
 				8CF0CF931C1E9CEF003B7547 /* TongjiBusHackerUITests */,
 				8CF0CF6D1C1E9CEF003B7547 /* Products */,
+				5990BE62575EF818C65F83DD /* Pods */,
+				43DE2145F36EB40C2BDA390B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,10 +130,11 @@
 		8CF0CF6E1C1E9CEF003B7547 /* TongjiBusHacker */ = {
 			isa = PBXGroup;
 			children = (
+				8CF0CFA81C1EBCEB003B7547 /* Model */,
+				8CF0CFA31C1EBB45003B7547 /* View */,
+				8CF0CFA21C1EBB2E003B7547 /* Controller */,
 				8CF0CF721C1E9CEF003B7547 /* AppDelegate.h */,
 				8CF0CF731C1E9CEF003B7547 /* AppDelegate.m */,
-				8CF0CF751C1E9CEF003B7547 /* ViewController.h */,
-				8CF0CF761C1E9CEF003B7547 /* ViewController.m */,
 				8CF0CF7B1C1E9CEF003B7547 /* Assets.xcassets */,
 				8CF0CF801C1E9CEF003B7547 /* Info.plist */,
 				8CF0CF6F1C1E9CEF003B7547 /* Supporting Files */,
@@ -134,6 +168,43 @@
 			path = TongjiBusHackerUITests;
 			sourceTree = "<group>";
 		};
+		8CF0CFA21C1EBB2E003B7547 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8CF0CF751C1E9CEF003B7547 /* ViewController.h */,
+				8CF0CF761C1E9CEF003B7547 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8CF0CFA31C1EBB45003B7547 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CF0CFA41C1EBB4C003B7547 /* Cell */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8CF0CFA41C1EBB4C003B7547 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8CF0CFAF1C1EBDA4003B7547 /* TJBusRouteTableViewCell.h */,
+				8CF0CFB01C1EBDA4003B7547 /* TJBusRouteTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		8CF0CFA81C1EBCEB003B7547 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8CF0CFA51C1EBC1F003B7547 /* TJPersonalInfo.h */,
+				8CF0CFA61C1EBC1F003B7547 /* TJPersonalInfo.m */,
+				8CF0CFA91C1EBD13003B7547 /* TJBusProxyManager.h */,
+				8CF0CFAA1C1EBD13003B7547 /* TJBusProxyManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8CF0CF991C1E9CEF003B7547 /* Build configuration list for PBXNativeTarget "TongjiBusHacker" */;
 			buildPhases = (
+				2758F422F6ADF037A065710B /* Check Pods Manifest.lock */,
 				8CF0CF681C1E9CEF003B7547 /* Sources */,
 				8CF0CF691C1E9CEF003B7547 /* Frameworks */,
 				8CF0CF6A1C1E9CEF003B7547 /* Resources */,
+				55CE3AA54CA358F5EC0B2069 /* Embed Pods Frameworks */,
+				6992DECC2F7004486CA126DA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,13 +331,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2758F422F6ADF037A065710B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		55CE3AA54CA358F5EC0B2069 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6992DECC2F7004486CA126DA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8CF0CF681C1E9CEF003B7547 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8CF0CF771C1E9CEF003B7547 /* ViewController.m in Sources */,
+				8CF0CFA71C1EBC1F003B7547 /* TJPersonalInfo.m in Sources */,
 				8CF0CF741C1E9CEF003B7547 /* AppDelegate.m in Sources */,
+				8CF0CFAB1C1EBD13003B7547 /* TJBusProxyManager.m in Sources */,
+				8CF0CFB11C1EBDA4003B7547 /* TJBusRouteTableViewCell.m in Sources */,
 				8CF0CF711C1E9CEF003B7547 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +507,7 @@
 		};
 		8CF0CF9A1C1E9CEF003B7547 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3993BCB7E19002463170602 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TongjiBusHacker/Info.plist;
@@ -393,6 +519,7 @@
 		};
 		8CF0CF9B1C1E9CEF003B7547 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7193EF3469DA504B3596DFBD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TongjiBusHacker/Info.plist;
@@ -469,6 +596,7 @@
 				8CF0CF9B1C1E9CEF003B7547 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8CF0CF9C1C1E9CEF003B7547 /* Build configuration list for PBXNativeTarget "TongjiBusHackerTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +605,7 @@
 				8CF0CF9E1C1E9CEF003B7547 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8CF0CF9F1C1E9CEF003B7547 /* Build configuration list for PBXNativeTarget "TongjiBusHackerUITests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +614,7 @@
 				8CF0CFA11C1E9CEF003B7547 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
