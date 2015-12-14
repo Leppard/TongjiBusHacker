@@ -8,15 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		748B0D2BFF13CCA5F2D01ADC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B92AB04480FD2CCEFC08EF05 /* libPods.a */; };
+		8C7F7BE71C1ECC5400F23932 /* TJBusLineInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F7BE61C1ECC5400F23932 /* TJBusLineInfoCell.m */; };
 		8CF0CF711C1E9CEF003B7547 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CF701C1E9CEF003B7547 /* main.m */; };
 		8CF0CF741C1E9CEF003B7547 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CF731C1E9CEF003B7547 /* AppDelegate.m */; };
 		8CF0CF771C1E9CEF003B7547 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CF761C1E9CEF003B7547 /* ViewController.m */; };
 		8CF0CF7C1C1E9CEF003B7547 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CF0CF7B1C1E9CEF003B7547 /* Assets.xcassets */; };
-		8CF0CF8A1C1E9CEF003B7547 /* TongjiBusHackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CF891C1E9CEF003B7547 /* TongjiBusHackerTests.m */; };
-		8CF0CF951C1E9CEF003B7547 /* TongjiBusHackerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CF941C1E9CEF003B7547 /* TongjiBusHackerUITests.m */; };
 		8CF0CFA71C1EBC1F003B7547 /* TJPersonalInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CFA61C1EBC1F003B7547 /* TJPersonalInfo.m */; };
 		8CF0CFAB1C1EBD13003B7547 /* TJBusProxyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CFAA1C1EBD13003B7547 /* TJBusProxyManager.m */; };
-		8CF0CFB11C1EBDA4003B7547 /* TJBusRouteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CFB01C1EBDA4003B7547 /* TJBusRouteTableViewCell.m */; };
+		8CF0CFB11C1EBDA4003B7547 /* TJBusRouteDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CFB01C1EBDA4003B7547 /* TJBusRouteDetailCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		7193EF3469DA504B3596DFBD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8C7F7BE51C1ECC5400F23932 /* TJBusLineInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJBusLineInfoCell.h; sourceTree = "<group>"; };
+		8C7F7BE61C1ECC5400F23932 /* TJBusLineInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJBusLineInfoCell.m; sourceTree = "<group>"; };
 		8CF0CF6C1C1E9CEF003B7547 /* TongjiBusHacker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TongjiBusHacker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF0CF701C1E9CEF003B7547 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8CF0CF721C1E9CEF003B7547 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,17 +48,13 @@
 		8CF0CF7B1C1E9CEF003B7547 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CF0CF801C1E9CEF003B7547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CF0CF851C1E9CEF003B7547 /* TongjiBusHackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TongjiBusHackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CF0CF891C1E9CEF003B7547 /* TongjiBusHackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TongjiBusHackerTests.m; sourceTree = "<group>"; };
-		8CF0CF8B1C1E9CEF003B7547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CF0CF901C1E9CEF003B7547 /* TongjiBusHackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TongjiBusHackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CF0CF941C1E9CEF003B7547 /* TongjiBusHackerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TongjiBusHackerUITests.m; sourceTree = "<group>"; };
-		8CF0CF961C1E9CEF003B7547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CF0CFA51C1EBC1F003B7547 /* TJPersonalInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPersonalInfo.h; sourceTree = "<group>"; };
 		8CF0CFA61C1EBC1F003B7547 /* TJPersonalInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPersonalInfo.m; sourceTree = "<group>"; };
 		8CF0CFA91C1EBD13003B7547 /* TJBusProxyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJBusProxyManager.h; sourceTree = "<group>"; };
 		8CF0CFAA1C1EBD13003B7547 /* TJBusProxyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJBusProxyManager.m; sourceTree = "<group>"; };
-		8CF0CFAF1C1EBDA4003B7547 /* TJBusRouteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJBusRouteTableViewCell.h; sourceTree = "<group>"; };
-		8CF0CFB01C1EBDA4003B7547 /* TJBusRouteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJBusRouteTableViewCell.m; sourceTree = "<group>"; };
+		8CF0CFAF1C1EBDA4003B7547 /* TJBusRouteDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJBusRouteDetailCell.h; sourceTree = "<group>"; };
+		8CF0CFB01C1EBDA4003B7547 /* TJBusRouteDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJBusRouteDetailCell.m; sourceTree = "<group>"; };
 		B92AB04480FD2CCEFC08EF05 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3993BCB7E19002463170602 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,8 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				8CF0CF6E1C1E9CEF003B7547 /* TongjiBusHacker */,
-				8CF0CF881C1E9CEF003B7547 /* TongjiBusHackerTests */,
-				8CF0CF931C1E9CEF003B7547 /* TongjiBusHackerUITests */,
 				8CF0CF6D1C1E9CEF003B7547 /* Products */,
 				5990BE62575EF818C65F83DD /* Pods */,
 				43DE2145F36EB40C2BDA390B /* Frameworks */,
@@ -150,24 +145,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8CF0CF881C1E9CEF003B7547 /* TongjiBusHackerTests */ = {
-			isa = PBXGroup;
-			children = (
-				8CF0CF891C1E9CEF003B7547 /* TongjiBusHackerTests.m */,
-				8CF0CF8B1C1E9CEF003B7547 /* Info.plist */,
-			);
-			path = TongjiBusHackerTests;
-			sourceTree = "<group>";
-		};
-		8CF0CF931C1E9CEF003B7547 /* TongjiBusHackerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8CF0CF941C1E9CEF003B7547 /* TongjiBusHackerUITests.m */,
-				8CF0CF961C1E9CEF003B7547 /* Info.plist */,
-			);
-			path = TongjiBusHackerUITests;
-			sourceTree = "<group>";
-		};
 		8CF0CFA21C1EBB2E003B7547 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,8 +165,10 @@
 		8CF0CFA41C1EBB4C003B7547 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				8CF0CFAF1C1EBDA4003B7547 /* TJBusRouteTableViewCell.h */,
-				8CF0CFB01C1EBDA4003B7547 /* TJBusRouteTableViewCell.m */,
+				8CF0CFAF1C1EBDA4003B7547 /* TJBusRouteDetailCell.h */,
+				8CF0CFB01C1EBDA4003B7547 /* TJBusRouteDetailCell.m */,
+				8C7F7BE51C1ECC5400F23932 /* TJBusLineInfoCell.h */,
+				8C7F7BE61C1ECC5400F23932 /* TJBusLineInfoCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -388,7 +367,8 @@
 				8CF0CFA71C1EBC1F003B7547 /* TJPersonalInfo.m in Sources */,
 				8CF0CF741C1E9CEF003B7547 /* AppDelegate.m in Sources */,
 				8CF0CFAB1C1EBD13003B7547 /* TJBusProxyManager.m in Sources */,
-				8CF0CFB11C1EBDA4003B7547 /* TJBusRouteTableViewCell.m in Sources */,
+				8C7F7BE71C1ECC5400F23932 /* TJBusLineInfoCell.m in Sources */,
+				8CF0CFB11C1EBDA4003B7547 /* TJBusRouteDetailCell.m in Sources */,
 				8CF0CF711C1E9CEF003B7547 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,7 +377,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CF0CF8A1C1E9CEF003B7547 /* TongjiBusHackerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +384,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CF0CF951C1E9CEF003B7547 /* TongjiBusHackerUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,7 +490,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TongjiBusHacker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = TAC.Tongji.edu.TongjiBusHacker;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.tongji.TongjiBusHacker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -524,7 +502,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TongjiBusHacker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = TAC.Tongji.edu.TongjiBusHacker;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.tongji.TongjiBusHacker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

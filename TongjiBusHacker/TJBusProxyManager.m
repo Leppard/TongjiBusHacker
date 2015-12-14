@@ -7,6 +7,7 @@
 //
 
 #import "TJBusProxyManager.h"
+#import <AFNetworking.h>
 
 
 static NSString *const kTJBusSchema = @"http://jiading.tongji.edu.cn:8080/TJbus/";

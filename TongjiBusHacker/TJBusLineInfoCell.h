@@ -1,5 +1,5 @@
 //
-//  TJBusRouteTableViewCell.h
+//  TJBusLineInfoCell.h
 //  TongjiBusHacker
 //
 //  Created by Leppard on 12/14/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TJBusRouteTableViewCell : UITableViewCell
+@interface TJBusLineInfoCell : UITableViewCell
 
 @end

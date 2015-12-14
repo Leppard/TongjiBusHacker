@@ -30,6 +30,8 @@ typedef NS_ENUM(NSInteger, TJBusDataSourceType) {
     self.title = @"数据源";
     [self.view addSubview:self.tableView];
     
+    self.tableView.tableFooterView = [[UIView alloc] init];
+    
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:nil];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
@@ -75,8 +77,9 @@ typedef NS_ENUM(NSInteger, TJBusDataSourceType) {
 - (UITableView *)tableView
 {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
+        _tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
         _tableView.dataSource = self;
         _tableView.delegate   = self;
     }

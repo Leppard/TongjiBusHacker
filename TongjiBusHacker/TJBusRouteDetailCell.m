@@ -6,14 +6,14 @@
 //  Copyright © 2015 Leppard. All rights reserved.
 //
 
-#import "TJBusRouteTableViewCell.h"
+#import "TJBusRouteDetailCell.h"
 
 static NSString *const kTJBusRouteID   = @"kTJBusRouteID";
 static NSString *const kTJBusRouteTime = @"kTJBusRouteTime";
 static NSString *const kTJBUsRouteLine = @"kTJBusRouteLine";
 static NSString *const kTJBusRouteRest = @"kTJBusRouteRest";
 
-@interface TJBusRouteTableViewCell ()
+@interface TJBusRouteDetailCell ()
 
 @property (nonatomic, strong) NSString *busID;
 @property (nonatomic, strong) NSString *time;
@@ -26,7 +26,7 @@ static NSString *const kTJBusRouteRest = @"kTJBusRouteRest";
 
 @end
 
-@implementation TJBusRouteTableViewCell
+@implementation TJBusRouteDetailCell
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary reuseIdentifier:(NSString *)reuseIdentifier
 {
