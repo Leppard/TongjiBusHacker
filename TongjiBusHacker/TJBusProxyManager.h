@@ -10,4 +10,8 @@
 
 @interface TJBusProxyManager : NSObject
 
++ (TJBusProxyManager *)shareManager;
+
+- (void)queryBusInfoArrayByRoute:(NSInteger)routeNumber complete:(void (^)(NSArray *data))completion;
+
 @end

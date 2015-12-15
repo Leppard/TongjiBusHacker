@@ -7,11 +7,12 @@
 //
 
 #import "TJBusRouteDetailCell.h"
+#import <Masonry.h>
 
-static NSString *const kTJBusRouteID   = @"kTJBusRouteID";
-static NSString *const kTJBusRouteTime = @"kTJBusRouteTime";
-static NSString *const kTJBUsRouteLine = @"kTJBusRouteLine";
-static NSString *const kTJBusRouteRest = @"kTJBusRouteRest";
+static NSString *const kTJBusRouteID   = @"bus_id";
+static NSString *const kTJBusRouteTime = @"time";
+static NSString *const kTJBUsRouteLine = @"line";
+static NSString *const kTJBusRouteRest = @"rest";
 
 @interface TJBusRouteDetailCell ()
 
@@ -28,11 +29,10 @@ static NSString *const kTJBusRouteRest = @"kTJBusRouteRest";
 
 @implementation TJBusRouteDetailCell
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary reuseIdentifier:(NSString *)reuseIdentifier
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
-    self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self setUpRoute:dictionary];
         [self setUpViewsWithConstraints];
     }
     return self;
@@ -56,16 +56,38 @@ static NSString *const kTJBusRouteRest = @"kTJBusRouteRest";
     if ([dictionary objectForKey:kTJBusRouteRest]) {
         _rest = [dictionary objectForKey:kTJBusRouteRest];
     }
+    
+    [self updateLabelText];
+}
+
+- (void)updateLabelText
+{
+    self.lineInfo.text = [NSString stringWithFormat:@"线路：%@", _line];
+    self.timeInfo.text = [NSString stringWithFormat:@"时间：%@", _time];
+    self.restInfo.text = [NSString stringWithFormat:@"余票：%@", _rest];
 }
 
 - (void)setUpViewsWithConstraints
 {
-    [self addSubview:self.timeInfo];
-    [self addSubview:self.lineInfo];
-    [self addSubview:self.restInfo];
+    [self.contentView addSubview:self.timeInfo];
+    [self.contentView addSubview:self.lineInfo];
+    [self.contentView addSubview:self.restInfo];
     
-    
-    
+    [self.lineInfo mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.equalTo(@30);
+        make.left.equalTo(self.contentView.mas_left).offset(10);
+        make.top.equalTo(self.contentView.mas_top).offset(10);
+    }];
+    [self.timeInfo mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.equalTo(@20);
+        make.left.equalTo(self.contentView.mas_left).offset(10);
+        make.bottom.equalTo(self.contentView.mas_bottom).offset(-10);
+    }];
+    [self.restInfo mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.equalTo(@20);
+        make.right.equalTo(self.contentView.mas_right).offset(-20);
+        make.bottom.equalTo(self.contentView.mas_bottom).offset(-10);
+    }];
 }
 
 #pragma mark - setters & getters
@@ -74,7 +96,7 @@ static NSString *const kTJBusRouteRest = @"kTJBusRouteRest";
 {
     if (!_lineInfo) {
         _lineInfo = [[UILabel alloc] init];
-        _lineInfo.font = [UIFont systemFontOfSize:20];
+        _lineInfo.font = [UIFont systemFontOfSize:18];
     }
     return _lineInfo;
 }
@@ -83,7 +105,8 @@ static NSString *const kTJBusRouteRest = @"kTJBusRouteRest";
 {
     if (!_timeInfo) {
         _timeInfo = [[UILabel alloc] init];
-        _timeInfo.font = [UIFont systemFontOfSize:12];
+        _timeInfo.font = [UIFont systemFontOfSize:14];
+        _timeInfo.textColor = [UIColor darkGrayColor];
     }
     return _timeInfo;
 }
@@ -92,7 +115,8 @@ static NSString *const kTJBusRouteRest = @"kTJBusRouteRest";
 {
     if (!_restInfo) {
         _restInfo = [[UILabel alloc] init];
-        _restInfo.font = [UIFont systemFontOfSize:12];
+        _restInfo.font = [UIFont systemFontOfSize:14];
+        _restInfo.textColor = [UIColor darkGrayColor];
     }
     return _restInfo;
 }

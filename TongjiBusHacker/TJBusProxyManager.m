@@ -16,7 +16,7 @@ static NSString *const kTJBusSchema = @"http://jiading.tongji.edu.cn:8080/TJbus/
 
 #pragma mark - life cycle
 
-- (instancetype)shareManager
++ (TJBusProxyManager *)shareManager
 {
     static dispatch_once_t token;
     static TJBusProxyManager *manager;
@@ -30,15 +30,15 @@ static NSString *const kTJBusSchema = @"http://jiading.tongji.edu.cn:8080/TJbus/
 
 #pragma mark - private methods
 
-- (void)queryBusInfoByRoute:(NSInteger)routeNumber
+- (void)queryBusInfoArrayByRoute:(NSInteger)routeNumber complete:(void (^)(NSArray *))completion
 {
     AFHTTPSessionManager *httpManager = [[AFHTTPSessionManager alloc] init];
     NSString *routeUrl = [kTJBusSchema stringByAppendingString:[NSString stringWithFormat:@"GetBusServlet?route_id=%ld", (long)routeNumber]];
     
     [httpManager GET:routeUrl parameters:nil
              success:^(NSURLSessionDataTask *task, id responseObject) {
-                 if (responseObject) {
-                     
+                 if (responseObject && [responseObject isKindOfClass:([NSArray class])]) {
+                     completion((NSArray *)responseObject);
                  }
              } failure:^(NSURLSessionDataTask *task, NSError *error) {
                  

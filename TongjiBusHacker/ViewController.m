@@ -32,7 +32,7 @@
     self.navigationItem.rightBarButtonItem = rightItem;
 }
 
-#pragma mark - UITableViewDelegate
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -43,6 +43,8 @@
 {
     return 2;
 }
+
+#pragma mark - UITableViewDelegate
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

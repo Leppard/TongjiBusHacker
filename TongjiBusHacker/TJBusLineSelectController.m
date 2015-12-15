@@ -7,6 +7,7 @@
 //
 
 #import "TJBusLineSelectController.h"
+#import "TJBusRouteDetailController.h"
 #import "TJBusLineInfoCell.h"
 
 typedef NS_ENUM(NSUInteger, TJBusLine) {
@@ -45,11 +46,12 @@ typedef NS_ENUM(NSUInteger, TJBusLine) {
     [super viewDidLoad];
     
     self.title = @"路线选择";
+    self.tableView.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:self.tableView];
     
 }
 
-#pragma mark - UITableViewDelegate
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -60,6 +62,8 @@ typedef NS_ENUM(NSUInteger, TJBusLine) {
 {
     return 8;
 }
+
+#pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -112,7 +116,8 @@ typedef NS_ENUM(NSUInteger, TJBusLine) {
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    TJBusRouteDetailController *vc = [[TJBusRouteDetailController alloc] initWithRouteNumber:indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
