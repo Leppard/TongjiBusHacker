@@ -82,8 +82,8 @@
             weakSelf.routesArray = data;
             [weakSelf.tableView reloadData];
             
-            [self.indicator stopAnimating];
-            [self.indicator removeFromSuperview];
+            [weakSelf.indicator stopAnimating];
+            [weakSelf.indicator removeFromSuperview];
         }
     }];
 }
