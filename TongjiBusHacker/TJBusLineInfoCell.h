@@ -10,4 +10,6 @@
 
 @interface TJBusLineInfoCell : UITableViewCell
 
+- (void)setUpTitleFromLocation:(NSString *)fromLocation to:(NSString *)toLocation;
+
 @end

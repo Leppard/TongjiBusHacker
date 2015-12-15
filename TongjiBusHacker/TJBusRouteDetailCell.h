@@ -10,4 +10,6 @@
 
 @interface TJBusRouteDetailCell : UITableViewCell
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary reuseIdentifier:(NSString *)reuseIdentifier;
+
 @end

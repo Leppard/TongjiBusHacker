@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		748B0D2BFF13CCA5F2D01ADC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B92AB04480FD2CCEFC08EF05 /* libPods.a */; };
+		8C56A5F11C1FAFA4005C8054 /* TJBusLineSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C56A5F01C1FAFA4005C8054 /* TJBusLineSelectController.m */; };
 		8C7F7BE71C1ECC5400F23932 /* TJBusLineInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F7BE61C1ECC5400F23932 /* TJBusLineInfoCell.m */; };
 		8CF0CF711C1E9CEF003B7547 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CF701C1E9CEF003B7547 /* main.m */; };
 		8CF0CF741C1E9CEF003B7547 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CF731C1E9CEF003B7547 /* AppDelegate.m */; };
@@ -37,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		7193EF3469DA504B3596DFBD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8C56A5EF1C1FAFA4005C8054 /* TJBusLineSelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJBusLineSelectController.h; sourceTree = "<group>"; };
+		8C56A5F01C1FAFA4005C8054 /* TJBusLineSelectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJBusLineSelectController.m; sourceTree = "<group>"; };
 		8C7F7BE51C1ECC5400F23932 /* TJBusLineInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJBusLineInfoCell.h; sourceTree = "<group>"; };
 		8C7F7BE61C1ECC5400F23932 /* TJBusLineInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJBusLineInfoCell.m; sourceTree = "<group>"; };
 		8CF0CF6C1C1E9CEF003B7547 /* TongjiBusHacker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TongjiBusHacker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +153,8 @@
 			children = (
 				8CF0CF751C1E9CEF003B7547 /* ViewController.h */,
 				8CF0CF761C1E9CEF003B7547 /* ViewController.m */,
+				8C56A5EF1C1FAFA4005C8054 /* TJBusLineSelectController.h */,
+				8C56A5F01C1FAFA4005C8054 /* TJBusLineSelectController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -365,6 +370,7 @@
 			files = (
 				8CF0CF771C1E9CEF003B7547 /* ViewController.m in Sources */,
 				8CF0CFA71C1EBC1F003B7547 /* TJPersonalInfo.m in Sources */,
+				8C56A5F11C1FAFA4005C8054 /* TJBusLineSelectController.m in Sources */,
 				8CF0CF741C1E9CEF003B7547 /* AppDelegate.m in Sources */,
 				8CF0CFAB1C1EBD13003B7547 /* TJBusProxyManager.m in Sources */,
 				8C7F7BE71C1ECC5400F23932 /* TJBusLineInfoCell.m in Sources */,

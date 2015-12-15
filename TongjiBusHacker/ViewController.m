@@ -7,11 +7,7 @@
 //
 
 #import "ViewController.h"
-
-typedef NS_ENUM(NSInteger, TJBusDataSourceType) {
-    TJBusDataSourceTypeProxy  = 0,
-    TJBusDataSourceTypeCustom = 1,
-};
+#import "TJBusLineSelectController.h"
 
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -69,7 +65,8 @@ typedef NS_ENUM(NSInteger, TJBusDataSourceType) {
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    TJBusLineSelectController *vc = [[TJBusLineSelectController alloc] initWithDataSourceType:indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - getters & setters
