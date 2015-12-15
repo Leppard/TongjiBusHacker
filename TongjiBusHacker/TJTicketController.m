@@ -9,6 +9,14 @@
 #import "TJTicketController.h"
 #import <Masonry.h>
 
+static NSString *const kTJTicketName     = @"kTJTicketName";
+static NSString *const kTJTicketIdentity = @"kTJTicketIdentity";
+static NSString *const kTJTicketFrom     = @"kTJTicketFrom";
+static NSString *const kTJTicketTo       = @"kTJTicketTo";
+static NSString *const kTJTicketTime     = @"kTJTicketTime";
+static NSString *const kTJTicketDate     = @"kTJTicketDate";
+static NSString *const kTJTicketDetail   = @"kTJTicketDetail";
+
 @interface TJTicketController ()
 
 @property (nonatomic, strong) NSString *name;
@@ -48,7 +56,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    _fromWhereLabel   = [self setUpLabelWithText:_from];
+    _fromWhereLabel   = [self setUpLabelWithText:self.from];
     self.toWhereLabel = [self setUpLabelWithText:self.to];
     self.detailLabel  = [self setUpLabelWithText:self.detail];
     [self setUpViewsWithConstraints];
@@ -65,13 +73,32 @@
     _time = @"";
     _date = @"";
     _detail = @"";
-    
-    if (dictionary objectForKey:<#(nonnull id)#>)
+    if ([dictionary objectForKey:kTJTicketName]) {
+        _name = [dictionary objectForKey:kTJTicketName];
+    }
+    if ([dictionary objectForKey:kTJTicketIdentity]) {
+        _identity = [dictionary objectForKey:kTJTicketIdentity];
+    }
+    if ([dictionary objectForKey:kTJTicketFrom]) {
+        _from = [dictionary objectForKey:kTJTicketFrom];
+    }
+    if ([dictionary objectForKey:kTJTicketTo]) {
+        _to = [dictionary objectForKey:kTJTicketTo];
+    }
+    if ([dictionary objectForKey:kTJTicketTime]) {
+        _time = [dictionary objectForKey:kTJTicketTime];
+    }
+    if ([dictionary objectForKey:kTJTicketDate]) {
+        _date = [dictionary objectForKey:kTJTicketDate];
+    }
+    if ([dictionary objectForKey:kTJTicketDetail]) {
+        _detail = [dictionary objectForKey:kTJTicketDetail];
+    }
 }
 
 - (void)setUpViewsWithConstraints
 {
-    [self.view addSubview:_nameLabel];
+    [self.view addSubview:self.nameLabel];
     [self.view addSubview:self.titleImage];
     
     [self.titleImage mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -88,57 +115,57 @@
 
 - (void)setUpPersonalInfoViews
 {
-    [self.view addSubview:_nameLabel];
+    [self.view addSubview:self.nameLabel];
     [self.view addSubview:self.idLabel];
-    [self.view addSubview:_dateAndTimeLabel];
+    [self.view addSubview:self.dateAndTimeLabel];
     
-    [_nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(@25);
         make.top.equalTo(self.titleImage.mas_bottom).offset(9);
         make.left.equalTo(self.view.mas_left).offset(94);
     }];
     [self.idLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(@25);
-        make.centerY.equalTo(_nameLabel.mas_centerY);
+        make.centerY.equalTo(self.nameLabel.mas_centerY);
         make.right.equalTo(self.view.mas_right).offset(-87);
     }];
-    [_dateAndTimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.dateAndTimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(@18);
         make.centerX.equalTo(self.view.mas_centerX);
-        make.top.equalTo(_nameLabel.mas_bottom).offset(13);
+        make.top.equalTo(self.nameLabel.mas_bottom).offset(13);
     }];
 }
 
 - (void)setUpBusInfoViews
 {
-    [self.view addSubview:_fromWhereLabel];
+    [self.view addSubview:self.fromWhereLabel];
     [self.view addSubview:self.toWhereLabel];
     [self.view addSubview:self.trackBGImage];
     [self.view addSubview:self.detailLabel];
     [self.view addSubview:self.mainImage];
     
-    [_fromWhereLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.fromWhereLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(@18);
         make.width.equalTo(@40);
-        make.top.equalTo(_dateAndTimeLabel.mas_bottom).offset(66);
+        make.top.equalTo(self.dateAndTimeLabel.mas_bottom).offset(66);
         make.left.equalTo(self.view.mas_left).offset(40);
     }];
     [self.toWhereLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(@18);
         make.width.equalTo(@40);
-        make.centerY.equalTo(_fromWhereLabel.mas_centerY);
+        make.centerY.equalTo(self.fromWhereLabel.mas_centerY);
         make.right.equalTo(self.view.mas_right).offset(-32);
     }];
     [self.trackBGImage mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(@11);
-        make.centerY.equalTo(_fromWhereLabel.mas_centerY);
-        make.left.equalTo(_fromWhereLabel.mas_right).offset(16);
+        make.centerY.equalTo(self.fromWhereLabel.mas_centerY);
+        make.left.equalTo(self.fromWhereLabel.mas_right).offset(16);
         make.right.equalTo(self.toWhereLabel.mas_left).offset(-10);
     }];
     
     [self.detailLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(@18);
-        make.top.equalTo(_fromWhereLabel.mas_bottom).offset(8);
+        make.top.equalTo(self.fromWhereLabel.mas_bottom).offset(8);
         make.centerX.equalTo(self.view.mas_centerX);
     }];
     [self.mainImage mas_makeConstraints:^(MASConstraintMaker *make) {
