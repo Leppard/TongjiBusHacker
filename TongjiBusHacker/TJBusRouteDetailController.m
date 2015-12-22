@@ -7,6 +7,7 @@
 //
 
 #import "TJBusRouteDetailController.h"
+#import "TJTicketController.h"
 #import "TJBusRouteDetailCell.h"
 #import "TJBusProxyManager.h"
 
@@ -72,6 +73,11 @@
     return cell;
 }
 
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    NSDictionary *dictionary = [self]
+//}
+
 #pragma mark - private methods
 
 - (void)loadRouteData
@@ -87,6 +93,12 @@
         }
     }];
 }
+
+//- (NSDictionary *)setUpTicketDictionary
+//{
+//    NSDictionary *dictionary = [NSDictionary dictionary];
+//    dictionary setValue: forKey:<#(nonnull NSString *)#>
+//}
 
 #pragma mark - getters & setters
 

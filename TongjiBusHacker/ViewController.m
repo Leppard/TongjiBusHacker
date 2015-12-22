@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TJEditPersonalInfoController.h"
 #import "TJBusLineSelectController.h"
 
 
@@ -28,7 +29,7 @@
     
     self.tableView.tableFooterView = [[UIView alloc] init];
     
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:nil];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(setUpPersonalInfo)];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
 
@@ -69,6 +70,14 @@
 {
     TJBusLineSelectController *vc = [[TJBusLineSelectController alloc] initWithDataSourceType:indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - event response
+
+- (void)setUpPersonalInfo
+{
+    TJEditPersonalInfoController *editVC = [[TJEditPersonalInfoController alloc] init];
+    [self.navigationController pushViewController:editVC animated:YES];
 }
 
 #pragma mark - getters & setters

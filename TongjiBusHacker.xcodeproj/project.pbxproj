@@ -11,6 +11,7 @@
 		8C56A5F11C1FAFA4005C8054 /* TJBusLineSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C56A5F01C1FAFA4005C8054 /* TJBusLineSelectController.m */; };
 		8C56A5F41C1FBC78005C8054 /* TJBusRouteDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C56A5F31C1FBC78005C8054 /* TJBusRouteDetailController.m */; };
 		8C56A5F71C1FFFC9005C8054 /* TJTicketController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C56A5F61C1FFFC9005C8054 /* TJTicketController.m */; };
+		8C56A5FA1C213091005C8054 /* TJEditPersonalInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C56A5F91C213091005C8054 /* TJEditPersonalInfoController.m */; };
 		8C7F7BE71C1ECC5400F23932 /* TJBusLineInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F7BE61C1ECC5400F23932 /* TJBusLineInfoCell.m */; };
 		8CF0CF711C1E9CEF003B7547 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CF701C1E9CEF003B7547 /* main.m */; };
 		8CF0CF741C1E9CEF003B7547 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CF731C1E9CEF003B7547 /* AppDelegate.m */; };
@@ -46,6 +47,8 @@
 		8C56A5F31C1FBC78005C8054 /* TJBusRouteDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJBusRouteDetailController.m; sourceTree = "<group>"; };
 		8C56A5F51C1FFFC9005C8054 /* TJTicketController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJTicketController.h; sourceTree = "<group>"; };
 		8C56A5F61C1FFFC9005C8054 /* TJTicketController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJTicketController.m; sourceTree = "<group>"; };
+		8C56A5F81C213091005C8054 /* TJEditPersonalInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJEditPersonalInfoController.h; sourceTree = "<group>"; };
+		8C56A5F91C213091005C8054 /* TJEditPersonalInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJEditPersonalInfoController.m; sourceTree = "<group>"; };
 		8C7F7BE51C1ECC5400F23932 /* TJBusLineInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJBusLineInfoCell.h; sourceTree = "<group>"; };
 		8C7F7BE61C1ECC5400F23932 /* TJBusLineInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJBusLineInfoCell.m; sourceTree = "<group>"; };
 		8CF0CF6C1C1E9CEF003B7547 /* TongjiBusHacker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TongjiBusHacker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +168,8 @@
 				8C56A5F31C1FBC78005C8054 /* TJBusRouteDetailController.m */,
 				8C56A5F51C1FFFC9005C8054 /* TJTicketController.h */,
 				8C56A5F61C1FFFC9005C8054 /* TJTicketController.m */,
+				8C56A5F81C213091005C8054 /* TJEditPersonalInfoController.h */,
+				8C56A5F91C213091005C8054 /* TJEditPersonalInfoController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -381,6 +386,7 @@
 				8CF0CF771C1E9CEF003B7547 /* ViewController.m in Sources */,
 				8CF0CFA71C1EBC1F003B7547 /* TJPersonalInfo.m in Sources */,
 				8C56A5F11C1FAFA4005C8054 /* TJBusLineSelectController.m in Sources */,
+				8C56A5FA1C213091005C8054 /* TJEditPersonalInfoController.m in Sources */,
 				8CF0CF741C1E9CEF003B7547 /* AppDelegate.m in Sources */,
 				8C56A5F41C1FBC78005C8054 /* TJBusRouteDetailController.m in Sources */,
 				8C56A5F71C1FFFC9005C8054 /* TJTicketController.m in Sources */,
@@ -507,6 +513,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TongjiBusHacker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.tongji.TongjiBusHacker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -519,6 +526,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TongjiBusHacker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.tongji.TongjiBusHacker;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -10,4 +10,9 @@
 
 @interface TJPersonalInfo : NSObject
 
+@property (nonatomic, strong) NSString *personName;
+@property (nonatomic, strong) NSString *personID;
+
++ (instancetype)shareInfo;
+
 @end
