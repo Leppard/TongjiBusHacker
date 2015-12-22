@@ -10,6 +10,9 @@
 
 @interface TJBusLineInfoCell : UITableViewCell
 
+@property (nonatomic, strong, readonly) UILabel *fromLocation;
+@property (nonatomic, strong, readonly) UILabel *toLocation;
+
 - (void)setUpTitleFromLocation:(NSString *)fromLocation to:(NSString *)toLocation;
 
 @end

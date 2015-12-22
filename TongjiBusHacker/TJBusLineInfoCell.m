@@ -11,9 +11,9 @@
 
 @interface TJBusLineInfoCell ()
 
-@property (nonatomic, strong) UILabel *fromLocation;
+@property (nonatomic, strong, readwrite) UILabel *fromLocation;
 @property (nonatomic, strong) UILabel *connectLabel;
-@property (nonatomic, strong) UILabel *toLocation;
+@property (nonatomic, strong, readwrite) UILabel *toLocation;
 
 @end
 

@@ -12,12 +12,12 @@
 @interface TJTicketController ()
 
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *identity; // 学号
+@property (nonatomic, strong) NSString *identity;
 @property (nonatomic, strong) NSString *from;
 @property (nonatomic, strong) NSString *to;
 @property (nonatomic, strong) NSString *time;
 @property (nonatomic, strong) NSString *date;
-@property (nonatomic, strong) NSString *detail; // 线路信息
+@property (nonatomic, strong) NSString *detail;
 
 @property (nonatomic, strong) UIImageView *titleImage;
 @property (nonatomic, strong) UIImageView *mainImage;

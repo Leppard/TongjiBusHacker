@@ -10,6 +10,7 @@
 #import "TJTicketController.h"
 #import "TJBusRouteDetailCell.h"
 #import "TJPersonalInfoManager.h"
+#import "TJTicketInfoManager.h"
 #import "TJBusProxyManager.h"
 
 @interface TJBusRouteDetailController ()<UITableViewDataSource, UITableViewDelegate>
@@ -74,10 +75,14 @@
     return cell;
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    NSDictionary *dictionary = [self]
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // save route time for ticket
+    TJBusRouteDetailCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [TJTicketInfoManager shareManager].time = cell.time;
+    
+    
+}
 
 #pragma mark - private methods
 
@@ -100,7 +105,7 @@
     NSDictionary *dictionary = [NSDictionary dictionary];
     [dictionary setValue:[TJPersonalInfoManager shareManager].personName forKey:kTJTicketName];
     [dictionary setValue:[TJPersonalInfoManager shareManager].personID forKey:kTJTicketIdentity];
-//    [dictionary setValue:cell. forKey:]
+//    [dictionary setValue:[] forKey:<#(nonnull NSString *)#>]
     return dictionary;
 }
 
