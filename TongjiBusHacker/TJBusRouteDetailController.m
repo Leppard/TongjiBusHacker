@@ -9,6 +9,7 @@
 #import "TJBusRouteDetailController.h"
 #import "TJTicketController.h"
 #import "TJBusRouteDetailCell.h"
+#import "TJPersonalInfoManager.h"
 #import "TJBusProxyManager.h"
 
 @interface TJBusRouteDetailController ()<UITableViewDataSource, UITableViewDelegate>
@@ -94,11 +95,14 @@
     }];
 }
 
-//- (NSDictionary *)setUpTicketDictionary
-//{
-//    NSDictionary *dictionary = [NSDictionary dictionary];
-//    dictionary setValue: forKey:<#(nonnull NSString *)#>
-//}
+- (NSDictionary *)setUpTicketDictionaryForCell:(TJBusRouteDetailCell *)cell
+{
+    NSDictionary *dictionary = [NSDictionary dictionary];
+    [dictionary setValue:[TJPersonalInfoManager shareManager].personName forKey:kTJTicketName];
+    [dictionary setValue:[TJPersonalInfoManager shareManager].personID forKey:kTJTicketIdentity];
+//    [dictionary setValue:cell. forKey:]
+    return dictionary;
+}
 
 #pragma mark - getters & setters
 

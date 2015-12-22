@@ -7,7 +7,7 @@
 //
 
 #import "TJEditPersonalInfoController.h"
-#import "TJPersonalInfo.h"
+#import "TJPersonalInfoManager.h"
 #import <Masonry.h>
 
 #define IS_OS_8_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
@@ -54,11 +54,11 @@ static NSString *const kTJPersonalInfoUserDefaultsData = @"kTJPersonalInfoUserDe
         return;
     }
     
-    [TJPersonalInfo shareInfo].personName = self.nameText.text;
-    [TJPersonalInfo shareInfo].personID   = self.idText.text;
+    [TJPersonalInfoManager shareManager].personName = self.nameText.text;
+    [TJPersonalInfoManager shareManager].personID   = self.idText.text;
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[TJPersonalInfo shareInfo] forKey:kTJPersonalInfoUserDefaultsData];
+    [defaults setObject:[TJPersonalInfoManager shareManager] forKey:kTJPersonalInfoUserDefaultsData];
     [defaults synchronize];
 }
 
@@ -92,10 +92,10 @@ static NSString *const kTJPersonalInfoUserDefaultsData = @"kTJPersonalInfoUserDe
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     id data = [defaults objectForKey:kTJPersonalInfoUserDefaultsData];
-    if (! [data isKindOfClass:[TJPersonalInfo class]]) {
+    if (! [data isKindOfClass:[TJPersonalInfoManager class]]) {
         return;
     }
-    TJPersonalInfo *info = [defaults objectForKey:kTJPersonalInfoUserDefaultsData];
+    TJPersonalInfoManager *info = [defaults objectForKey:kTJPersonalInfoUserDefaultsData];
     self.nameText.text   = info.personName;
     self.idText.text     = info.personID;
 }

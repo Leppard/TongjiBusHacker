@@ -6,24 +6,24 @@
 //  Copyright © 2015 Leppard. All rights reserved.
 //
 
-#import "TJPersonalInfo.h"
+#import "TJPersonalInfoManager.h"
 
 static NSString *const kTJPersonID = @"kTJPersonID";
 static NSString *const kTJPersonName = @"kTJPersonName";
 
-@interface TJPersonalInfo ()<NSCoding>
+@interface TJPersonalInfoManager ()<NSCoding>
 
 @end
 
-@implementation TJPersonalInfo
+@implementation TJPersonalInfoManager
 
-+ (instancetype)shareInfo
++ (instancetype)shareManager
 {
     static dispatch_once_t token;
-    static TJPersonalInfo *info;
+    static TJPersonalInfoManager *info;
     
     dispatch_once(&token, ^{
-        info = [[TJPersonalInfo alloc] init];
+        info = [[TJPersonalInfoManager alloc] init];
         info.personID = @"";
         info.personName = @"";
     });

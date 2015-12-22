@@ -17,7 +17,7 @@
 		8CF0CF741C1E9CEF003B7547 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CF731C1E9CEF003B7547 /* AppDelegate.m */; };
 		8CF0CF771C1E9CEF003B7547 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CF761C1E9CEF003B7547 /* ViewController.m */; };
 		8CF0CF7C1C1E9CEF003B7547 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CF0CF7B1C1E9CEF003B7547 /* Images.xcassets */; };
-		8CF0CFA71C1EBC1F003B7547 /* TJPersonalInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CFA61C1EBC1F003B7547 /* TJPersonalInfo.m */; };
+		8CF0CFA71C1EBC1F003B7547 /* TJPersonalInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CFA61C1EBC1F003B7547 /* TJPersonalInfoManager.m */; };
 		8CF0CFAB1C1EBD13003B7547 /* TJBusProxyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CFAA1C1EBD13003B7547 /* TJBusProxyManager.m */; };
 		8CF0CFB11C1EBDA4003B7547 /* TJBusRouteDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0CFB01C1EBDA4003B7547 /* TJBusRouteDetailCell.m */; };
 /* End PBXBuildFile section */
@@ -61,8 +61,8 @@
 		8CF0CF801C1E9CEF003B7547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CF0CF851C1E9CEF003B7547 /* TongjiBusHackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TongjiBusHackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF0CF901C1E9CEF003B7547 /* TongjiBusHackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TongjiBusHackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CF0CFA51C1EBC1F003B7547 /* TJPersonalInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPersonalInfo.h; sourceTree = "<group>"; };
-		8CF0CFA61C1EBC1F003B7547 /* TJPersonalInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPersonalInfo.m; sourceTree = "<group>"; };
+		8CF0CFA51C1EBC1F003B7547 /* TJPersonalInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPersonalInfoManager.h; sourceTree = "<group>"; };
+		8CF0CFA61C1EBC1F003B7547 /* TJPersonalInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPersonalInfoManager.m; sourceTree = "<group>"; };
 		8CF0CFA91C1EBD13003B7547 /* TJBusProxyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJBusProxyManager.h; sourceTree = "<group>"; };
 		8CF0CFAA1C1EBD13003B7547 /* TJBusProxyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJBusProxyManager.m; sourceTree = "<group>"; };
 		8CF0CFAF1C1EBDA4003B7547 /* TJBusRouteDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJBusRouteDetailCell.h; sourceTree = "<group>"; };
@@ -196,8 +196,8 @@
 		8CF0CFA81C1EBCEB003B7547 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8CF0CFA51C1EBC1F003B7547 /* TJPersonalInfo.h */,
-				8CF0CFA61C1EBC1F003B7547 /* TJPersonalInfo.m */,
+				8CF0CFA51C1EBC1F003B7547 /* TJPersonalInfoManager.h */,
+				8CF0CFA61C1EBC1F003B7547 /* TJPersonalInfoManager.m */,
 				8CF0CFA91C1EBD13003B7547 /* TJBusProxyManager.h */,
 				8CF0CFAA1C1EBD13003B7547 /* TJBusProxyManager.m */,
 			);
@@ -384,7 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CF0CF771C1E9CEF003B7547 /* ViewController.m in Sources */,
-				8CF0CFA71C1EBC1F003B7547 /* TJPersonalInfo.m in Sources */,
+				8CF0CFA71C1EBC1F003B7547 /* TJPersonalInfoManager.m in Sources */,
 				8C56A5F11C1FAFA4005C8054 /* TJBusRouteOverviewController.m in Sources */,
 				8C56A5FA1C213091005C8054 /* TJEditPersonalInfoController.m in Sources */,
 				8CF0CF741C1E9CEF003B7547 /* AppDelegate.m in Sources */,

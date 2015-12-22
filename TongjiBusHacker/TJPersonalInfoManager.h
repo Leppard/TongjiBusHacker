@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TJPersonalInfo : NSObject
+@interface TJPersonalInfoManager : NSObject
 
 @property (nonatomic, strong) NSString *personName;
 @property (nonatomic, strong) NSString *personID;
 
-+ (instancetype)shareInfo;
++ (instancetype)shareManager;
 
 @end

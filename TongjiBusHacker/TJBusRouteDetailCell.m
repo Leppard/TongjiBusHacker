@@ -16,10 +16,10 @@ static NSString *const kTJBusRouteRest = @"rest";
 
 @interface TJBusRouteDetailCell ()
 
-@property (nonatomic, strong) NSString *busID;
-@property (nonatomic, strong) NSString *time;
-@property (nonatomic, strong) NSString *line;
-@property (nonatomic, strong) NSString *rest;
+@property (nonatomic, strong, readwrite) NSString *busID;
+@property (nonatomic, strong, readwrite) NSString *time;
+@property (nonatomic, strong, readwrite) NSString *line;
+@property (nonatomic, strong, readwrite) NSString *rest;
 
 @property (nonatomic, strong) UILabel *lineInfo;
 @property (nonatomic, strong) UILabel *timeInfo;

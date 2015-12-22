@@ -10,6 +10,11 @@
 
 @interface TJBusRouteDetailCell : UITableViewCell
 
+@property (nonatomic, strong, readonly) NSString *busID;
+@property (nonatomic, strong, readonly) NSString *time;
+@property (nonatomic, strong, readonly) NSString *line;
+@property (nonatomic, strong, readonly) NSString *rest;
+
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 
 - (void)setUpRoute:(NSDictionary *)dictionary;
