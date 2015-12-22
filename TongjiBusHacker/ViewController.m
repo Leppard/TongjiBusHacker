@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "TJEditPersonalInfoController.h"
-#import "TJBusLineSelectController.h"
+#import "TJBusRouteOverviewController.h"
 
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -68,7 +68,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TJBusLineSelectController *vc = [[TJBusLineSelectController alloc] initWithDataSourceType:indexPath.row];
+    TJBusRouteOverviewController *vc = [[TJBusRouteOverviewController alloc] initWithDataSourceType:indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

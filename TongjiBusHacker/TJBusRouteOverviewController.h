@@ -13,7 +13,7 @@ typedef NS_ENUM(NSInteger, TJBusDataSourceType) {
     TJBusDataSourceTypeCustom = 1,
 };
 
-@interface TJBusLineSelectController : UIViewController
+@interface TJBusRouteOverviewController : UIViewController
 
 - (instancetype)initWithDataSourceType:(NSUInteger)type;
 

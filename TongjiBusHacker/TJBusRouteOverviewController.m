@@ -6,7 +6,7 @@
 //  Copyright © 2015 Leppard. All rights reserved.
 //
 
-#import "TJBusLineSelectController.h"
+#import "TJBusRouteOverviewController.h"
 #import "TJBusRouteDetailController.h"
 #import "TJBusLineInfoCell.h"
 
@@ -21,14 +21,14 @@ typedef NS_ENUM(NSUInteger, TJBusLine) {
     TJBusLineJiadingToCaoyang = 7,
 };
 
-@interface TJBusLineSelectController ()<UITableViewDataSource, UITableViewDelegate>
+@interface TJBusRouteOverviewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, assign) NSInteger dataSourceType;
 
 @end
 
-@implementation TJBusLineSelectController
+@implementation TJBusRouteOverviewController
 
 #pragma mark - life cycle
 
