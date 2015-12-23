@@ -8,10 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TJTicketInfoManager : NSObject
+@interface TJRouteInfoManager : NSObject
 
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *identity; // 学号
 @property (nonatomic, strong) NSString *from;
 @property (nonatomic, strong) NSString *to;
 @property (nonatomic, strong) NSString *time;

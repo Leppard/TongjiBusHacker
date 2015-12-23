@@ -9,7 +9,7 @@
 #import "TJBusRouteOverviewController.h"
 #import "TJBusRouteDetailController.h"
 #import "TJBusLineInfoCell.h"
-#import "TJTicketInfoManager.h"
+#import "TJRouteInfoManager.h"
 
 typedef NS_ENUM(NSUInteger, TJBusLine) {
     TJBusLineSipingToJiading  = 0,
@@ -119,8 +119,8 @@ typedef NS_ENUM(NSUInteger, TJBusLine) {
 {
     // save route info for ticket
     TJBusLineInfoCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    [TJTicketInfoManager shareManager].from = cell.fromLocation.text;
-    [TJTicketInfoManager shareManager].to   = cell.toLocation.text;
+    [TJRouteInfoManager shareManager].from = cell.fromLocation.text;
+    [TJRouteInfoManager shareManager].to   = cell.toLocation.text;
     
     TJBusRouteDetailController *vc = [[TJBusRouteDetailController alloc] initWithRouteNumber:indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];

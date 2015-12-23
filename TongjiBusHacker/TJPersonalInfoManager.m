@@ -8,8 +8,9 @@
 
 #import "TJPersonalInfoManager.h"
 
-static NSString *const kTJPersonID = @"kTJPersonID";
+static NSString *const kTJPersonID   = @"kTJPersonID";
 static NSString *const kTJPersonName = @"kTJPersonName";
+static NSString *const kTJPersonalInfoUserDefaultsData = @"kTJPersonalInfoUserDefaultsData";
 
 @interface TJPersonalInfoManager ()<NSCoding>
 
@@ -20,15 +21,21 @@ static NSString *const kTJPersonName = @"kTJPersonName";
 + (instancetype)shareManager
 {
     static dispatch_once_t token;
-    static TJPersonalInfoManager *info;
+    static TJPersonalInfoManager *manager;
     
     dispatch_once(&token, ^{
-        info = [[TJPersonalInfoManager alloc] init];
-        info.personID = @"";
-        info.personName = @"";
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        id data = [defaults objectForKey:kTJPersonalInfoUserDefaultsData];
+        if (data) {
+            manager = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        } else {
+            manager = [[TJPersonalInfoManager alloc] init];
+            manager.personID   = @"";
+            manager.personName = @"";
+        }
     });
     
-    return info;
+    return manager;
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder

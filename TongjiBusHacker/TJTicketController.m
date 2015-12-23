@@ -47,8 +47,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBarHidden = YES;
+    
     self.view.backgroundColor = [UIColor whiteColor];
-    _fromWhereLabel   = [self setUpLabelWithText:self.from];
+    self.fromWhereLabel   = [self setUpLabelWithText:self.from];
     self.toWhereLabel = [self setUpLabelWithText:self.to];
     self.detailLabel  = [self setUpLabelWithText:self.detail];
     [self setUpViewsWithConstraints];
@@ -182,10 +184,16 @@
 - (UILabel *)setUpLabelWithText:(NSString *)text
 {
     UILabel *label = [[UILabel alloc] init];
-    label.text = text;
     label.font = [UIFont systemFontOfSize:20];
     label.textColor = [UIColor blackColor];
     
+    if ([text rangeOfString:@"校区"].location != NSNotFound) {
+        text = [text stringByReplacingOccurrencesOfString:@"校区" withString:@""];
+    }
+    if ([text rangeOfString:@"同济"].location != NSNotFound) {
+        text = [text stringByReplacingOccurrencesOfString:@"同济" withString:@""];
+    }
+    label.text = text;
     return label;
 }
 
@@ -248,20 +256,20 @@
 {
     if (!_mainImage) {
         _mainImage = [[UIImageView alloc] init];
-        if ([_from isEqualToString:@"嘉定"]) {
-            _mainImage.image = [UIImage imageNamed:@"jiading"];
+        if ([self.from isEqualToString:@"嘉定校区"]) {
+            _mainImage.image = [UIImage imageNamed:@"jiading.jpg"];
         }
-        else if([_from isEqualToString:@"四平"]){
-            _mainImage.image = [UIImage imageNamed:@"siping"];
+        else if([self.from isEqualToString:@"四平校区"]){
+            _mainImage.image = [UIImage imageNamed:@"siping.jpg"];
         }
-        else if([_from isEqualToString:@"沪西"]){
-            _mainImage.image = [UIImage imageNamed:@"huxi"];
+        else if([self.from isEqualToString:@"沪西校区"]){
+            _mainImage.image = [UIImage imageNamed:@"huxi.jpg"];
         }
-        else if([_from isEqualToString:@"曹杨"]){
-            _mainImage.image = [UIImage imageNamed:@"caoyang"];
+        else if([self.from isEqualToString:@"曹杨八村"]){
+            _mainImage.image = [UIImage imageNamed:@"caoyang.jpg"];
         }
-        else if([_from isEqualToString:@"同济"]){
-            _mainImage.image = [UIImage imageNamed:@"beiyuan"];
+        else if([self.from isEqualToString:@"同济北苑"]){
+            _mainImage.image = [UIImage imageNamed:@"beiyuan.jpg"];
         }
     }
     return _mainImage;

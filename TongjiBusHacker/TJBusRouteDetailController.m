@@ -7,13 +7,16 @@
 //
 
 #import "TJBusRouteDetailController.h"
+#import "TJEditPersonalInfoController.h"
 #import "TJTicketController.h"
 #import "TJBusRouteDetailCell.h"
 #import "TJPersonalInfoManager.h"
-#import "TJTicketInfoManager.h"
+#import "TJRouteInfoManager.h"
 #import "TJBusProxyManager.h"
 
-@interface TJBusRouteDetailController ()<UITableViewDataSource, UITableViewDelegate>
+#define IS_OS_8_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+
+@interface TJBusRouteDetailController ()<UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UIActivityIndicatorView *indicator;
@@ -79,9 +82,22 @@
 {
     // save route time for ticket
     TJBusRouteDetailCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    [TJTicketInfoManager shareManager].time = cell.time;
+    [TJRouteInfoManager shareManager].time   = cell.time;
+    [TJRouteInfoManager shareManager].detail = cell.line;
     
-    
+    NSDictionary *dictionary = [self setUpTicketDictionary];
+    TJTicketController *ticketVC = [[TJTicketController alloc] initWithRouteDictionary:dictionary];
+    [self.navigationController pushViewController:ticketVC animated:YES];
+}
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (0 == buttonIndex) {
+        TJEditPersonalInfoController *vc = [[TJEditPersonalInfoController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 #pragma mark - private methods
@@ -100,13 +116,45 @@
     }];
 }
 
-- (NSDictionary *)setUpTicketDictionaryForCell:(TJBusRouteDetailCell *)cell
+- (NSDictionary *)setUpTicketDictionary
 {
-    NSDictionary *dictionary = [NSDictionary dictionary];
-    [dictionary setValue:[TJPersonalInfoManager shareManager].personName forKey:kTJTicketName];
-    [dictionary setValue:[TJPersonalInfoManager shareManager].personID forKey:kTJTicketIdentity];
-//    [dictionary setValue:[] forKey:<#(nonnull NSString *)#>]
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+    TJPersonalInfoManager *manager = [TJPersonalInfoManager shareManager];
+    if (manager.personID.length == 0 || manager.personName.length == 0) {
+        [self showEmptyInfoAlert];
+    }
+    [dictionary setObject:[TJPersonalInfoManager shareManager].personName forKey:kTJTicketName];
+    [dictionary setObject:[TJPersonalInfoManager shareManager].personID forKey:kTJTicketIdentity];
+    [dictionary setObject:[TJRouteInfoManager shareManager].from forKey:kTJTicketFrom];
+    [dictionary setObject:[TJRouteInfoManager shareManager].to forKey:kTJTicketTo];
+    [dictionary setObject:[TJRouteInfoManager shareManager].date forKey:kTJTicketDate];
+    [dictionary setObject:[TJRouteInfoManager shareManager].time forKey:kTJTicketTime];
+    [dictionary setObject:[TJRouteInfoManager shareManager].detail forKey:kTJTicketDetail];
     return dictionary;
+}
+
+- (void)showEmptyInfoAlert
+{
+    if (IS_OS_8_OR_LATER) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"请先设置个人信息再出票" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction *action) {
+                                                                  [alert dismissViewControllerAnimated:YES completion:nil];
+                                                              }];
+        UIAlertAction *setAction = [UIAlertAction actionWithTitle:@"设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [alert dismissViewControllerAnimated:YES completion:nil];
+            TJEditPersonalInfoController *vc = [[TJEditPersonalInfoController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
+        
+        [alert addAction:defaultAction];
+        [alert addAction:setAction];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    else {
+        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"请先设置个人信息再出票" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"设置", nil];
+        [view show];
+    }
 }
 
 #pragma mark - getters & setters

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		748B0D2BFF13CCA5F2D01ADC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B92AB04480FD2CCEFC08EF05 /* libPods.a */; };
-		8C4306A51C2951AD000409D3 /* TJTicketInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4306A41C2951AD000409D3 /* TJTicketInfoManager.m */; };
+		8C4306A51C2951AD000409D3 /* TJRouteInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4306A41C2951AD000409D3 /* TJRouteInfoManager.m */; };
 		8C56A5F11C1FAFA4005C8054 /* TJBusRouteOverviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C56A5F01C1FAFA4005C8054 /* TJBusRouteOverviewController.m */; };
 		8C56A5F41C1FBC78005C8054 /* TJBusRouteDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C56A5F31C1FBC78005C8054 /* TJBusRouteDetailController.m */; };
 		8C56A5F71C1FFFC9005C8054 /* TJTicketController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C56A5F61C1FFFC9005C8054 /* TJTicketController.m */; };
@@ -42,8 +42,8 @@
 
 /* Begin PBXFileReference section */
 		7193EF3469DA504B3596DFBD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		8C4306A31C2951AD000409D3 /* TJTicketInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJTicketInfoManager.h; sourceTree = "<group>"; };
-		8C4306A41C2951AD000409D3 /* TJTicketInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJTicketInfoManager.m; sourceTree = "<group>"; };
+		8C4306A31C2951AD000409D3 /* TJRouteInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJRouteInfoManager.h; sourceTree = "<group>"; };
+		8C4306A41C2951AD000409D3 /* TJRouteInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJRouteInfoManager.m; sourceTree = "<group>"; };
 		8C56A5EF1C1FAFA4005C8054 /* TJBusRouteOverviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJBusRouteOverviewController.h; sourceTree = "<group>"; };
 		8C56A5F01C1FAFA4005C8054 /* TJBusRouteOverviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJBusRouteOverviewController.m; sourceTree = "<group>"; };
 		8C56A5F21C1FBC78005C8054 /* TJBusRouteDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJBusRouteDetailController.h; sourceTree = "<group>"; };
@@ -201,10 +201,10 @@
 			children = (
 				8CF0CFA51C1EBC1F003B7547 /* TJPersonalInfoManager.h */,
 				8CF0CFA61C1EBC1F003B7547 /* TJPersonalInfoManager.m */,
+				8C4306A31C2951AD000409D3 /* TJRouteInfoManager.h */,
+				8C4306A41C2951AD000409D3 /* TJRouteInfoManager.m */,
 				8CF0CFA91C1EBD13003B7547 /* TJBusProxyManager.h */,
 				8CF0CFAA1C1EBD13003B7547 /* TJBusProxyManager.m */,
-				8C4306A31C2951AD000409D3 /* TJTicketInfoManager.h */,
-				8C4306A41C2951AD000409D3 /* TJTicketInfoManager.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -397,7 +397,7 @@
 				8C56A5F71C1FFFC9005C8054 /* TJTicketController.m in Sources */,
 				8CF0CFAB1C1EBD13003B7547 /* TJBusProxyManager.m in Sources */,
 				8C7F7BE71C1ECC5400F23932 /* TJBusLineInfoCell.m in Sources */,
-				8C4306A51C2951AD000409D3 /* TJTicketInfoManager.m in Sources */,
+				8C4306A51C2951AD000409D3 /* TJRouteInfoManager.m in Sources */,
 				8CF0CFB11C1EBDA4003B7547 /* TJBusRouteDetailCell.m in Sources */,
 				8CF0CF711C1E9CEF003B7547 /* main.m in Sources */,
 			);

@@ -14,7 +14,7 @@
 
 static NSString *const kTJPersonalInfoUserDefaultsData = @"kTJPersonalInfoUserDefaultsData";
 
-@interface TJEditPersonalInfoController ()<UITextFieldDelegate>
+@interface TJEditPersonalInfoController ()<UITextFieldDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) UITextField *nameText;
 @property (nonatomic, strong) UITextField *idText;
@@ -45,11 +45,20 @@ static NSString *const kTJPersonalInfoUserDefaultsData = @"kTJPersonalInfoUserDe
     return YES;
 }
 
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (0 == buttonIndex) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
 #pragma mark - event response
 
 - (void)savePersonalInfoData
 {
-    if(![self checkIfCanSave]) {
+    if(! [self checkIfCanSave]) {
         [self showErrorAlert];
         return;
     }
@@ -57,9 +66,12 @@ static NSString *const kTJPersonalInfoUserDefaultsData = @"kTJPersonalInfoUserDe
     [TJPersonalInfoManager shareManager].personName = self.nameText.text;
     [TJPersonalInfoManager shareManager].personID   = self.idText.text;
     
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:[TJPersonalInfoManager shareManager]];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[TJPersonalInfoManager shareManager] forKey:kTJPersonalInfoUserDefaultsData];
+    [defaults setObject:data forKey:kTJPersonalInfoUserDefaultsData];
     [defaults synchronize];
+    
+    [self showSuccessAlert];
 }
 
 #pragma mark - private methods
@@ -90,14 +102,8 @@ static NSString *const kTJPersonalInfoUserDefaultsData = @"kTJPersonalInfoUserDe
 
 - (void)initLocalData
 {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    id data = [defaults objectForKey:kTJPersonalInfoUserDefaultsData];
-    if (! [data isKindOfClass:[TJPersonalInfoManager class]]) {
-        return;
-    }
-    TJPersonalInfoManager *info = [defaults objectForKey:kTJPersonalInfoUserDefaultsData];
-    self.nameText.text   = info.personName;
-    self.idText.text     = info.personID;
+    self.nameText.text   = [TJPersonalInfoManager shareManager].personName;
+    self.idText.text     = [TJPersonalInfoManager shareManager].personID;
 }
 
 - (BOOL)checkIfCanSave
@@ -126,6 +132,25 @@ static NSString *const kTJPersonalInfoUserDefaultsData = @"kTJPersonalInfoUserDe
         UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"个人信息未填写完整" message:nil delegate:self cancelButtonTitle:@"我错了" otherButtonTitles:nil];
         [view show];
     }
+}
+
+- (void)showSuccessAlert
+{
+    if (IS_OS_8_OR_LATER) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"保存成功" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {
+                                                                  [alert dismissViewControllerAnimated:YES completion:nil];
+                                                                  [self.navigationController popViewControllerAnimated:YES];
+                                                              }];
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    else {
+        UIAlertView *view = [[UIAlertView alloc] initWithTitle:@"保存成功" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"确认", nil];
+        [view show];
+    }
+
 }
 
 #pragma mark - getters & setters
